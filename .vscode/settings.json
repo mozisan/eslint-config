@@ -1,0 +1,10 @@
+{
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "javascript.format.enable": true,
+  "prettier.disableLanguages": ["markdown"]
+}
