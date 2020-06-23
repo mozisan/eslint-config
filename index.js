@@ -46,6 +46,21 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': 'error',
     '@typescript-eslint/interface-name-prefix': 'off',
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        selector: 'default',
+        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+        leadingUnderscore: 'forbid',
+        trailingUnderscore: 'forbid',
+      },
+      {
+        selector: 'typeLike',
+        format: ['PascalCase', 'UPPER_CASE'],
+        leadingUnderscore: 'forbid',
+        trailingUnderscore: 'forbid',
+      },
+    ],
     '@typescript-eslint/no-dynamic-delete': 'error',
     '@typescript-eslint/no-floating-promises': 'error',
     '@typescript-eslint/no-implied-eval': 'error',
