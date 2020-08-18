@@ -1,9 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
     sourceType: 'module',
     project: './tsconfig.json',
     createDefaultProgram: true,
@@ -13,21 +10,15 @@ module.exports = {
     'filenames',
     'functional',
     'import',
-    'prettier',
-    'react',
-    'react-hooks',
     'simple-import-sort',
   ],
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:import/typescript',
-    'plugin:react/recommended',
     'prettier',
     'prettier/@typescript-eslint',
-    'prettier/react',
   ],
   rules: {
     // ESLint rules
@@ -51,7 +42,7 @@ module.exports = {
       {
         selector: 'default',
         format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
-        leadingUnderscore: 'forbid',
+        leadingUnderscore: 'allow',
         trailingUnderscore: 'forbid',
       },
       {
@@ -73,9 +64,11 @@ module.exports = {
     '@typescript-eslint/no-unnecessary-qualifier': 'error',
     '@typescript-eslint/no-unnecessary-type-arguments': 'error',
     '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/prefer-includes': 'error',
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
     '@typescript-eslint/prefer-optional-chain': 'error',
     '@typescript-eslint/prefer-readonly': 'error',
+    '@typescript-eslint/prefer-ts-expect-error': 'error',
     '@typescript-eslint/restrict-plus-operands': 'error',
     '@typescript-eslint/restrict-template-expressions': [
       'error',
@@ -85,6 +78,7 @@ module.exports = {
     ],
     '@typescript-eslint/return-await': 'error',
     '@typescript-eslint/strict-boolean-expressions': 'error',
+    '@typescript-eslint/switch-exhaustiveness-check': 'error',
     'filenames/match-regex': [
       'error',
       '^(index(\\.d)?|_?[a-z][a-z0-9]+(_[a-z][a-z0-9]+)*(\\.d|\\.[a-z][a-z0-9]+)?)$',
@@ -96,19 +90,18 @@ module.exports = {
         ignorePattern: '(^module\\.exports$|Ref\\.[^\\.]+$)',
       },
     ],
-    'functional/no-loop-statement': 'error',
     'functional/no-method-signature': 'error',
     'functional/prefer-readonly-type': 'error',
     'import/first': 'error',
     'import/no-default-export': 'error',
     'import/no-duplicates': 'error',
-    'prettier/prettier': 'error',
-    'react/display-name': 'off',
-    'react/jsx-uses-react': 'error',
-    'react/jsx-uses-vars': 'error',
-    'react/prop-types': 'off',
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'error',
+    'import/no-relative-parent-imports': 'error',
+    'import/no-useless-path-segments': [
+      'error',
+      {
+        noUselessIndex: true,
+      },
+    ],
     'simple-import-sort/sort': 'error',
   },
   settings: {
