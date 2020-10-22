@@ -1,4 +1,0 @@
-{
-  ".*rc": ["prettier --write"],
-  "*.(js|json|md)": ["prettier --write"]
-}

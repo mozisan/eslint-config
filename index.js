@@ -14,6 +14,7 @@ module.exports = {
   ],
   extends: [
     'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:import/typescript',
@@ -33,9 +34,12 @@ module.exports = {
     'object-shorthand': 'error',
     'prefer-destructuring': 'error',
     // Plugin rules
+    '@typescript-eslint/consistent-indexed-object-style': 'error',
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+    '@typescript-eslint/consistent-type-imports': 'error',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': 'error',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/naming-convention': [
       'error',
@@ -68,6 +72,7 @@ module.exports = {
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
     '@typescript-eslint/prefer-optional-chain': 'error',
     '@typescript-eslint/prefer-readonly': 'error',
+    '@typescript-eslint/prefer-string-starts-ends-with': 'error',
     '@typescript-eslint/prefer-ts-expect-error': 'error',
     '@typescript-eslint/restrict-plus-operands': 'error',
     '@typescript-eslint/restrict-template-expressions': [

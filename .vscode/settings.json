@@ -1,10 +1,15 @@
 {
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
+  "eslint.packageManager": "npm",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "javascript.format.enable": true,
-  "prettier.disableLanguages": ["markdown"]
+  "javascript.format.enable": false,
+  "prettier.enable": true
 }
