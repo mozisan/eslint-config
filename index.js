@@ -23,6 +23,7 @@ module.exports = {
   ],
   rules: {
     // ESLint rules
+    eqeqeq: ['error', 'always', { null: 'never' }],
     'max-params': ['error', 2],
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-lonely-if': 'error',
