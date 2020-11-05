@@ -1,16 +1,11 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    sourceType: 'module',
-    project: './tsconfig.json',
-    createDefaultProgram: true,
-  },
   plugins: [
     '@typescript-eslint',
     'filenames',
     'functional',
     'import',
     'simple-import-sort',
+    'unused-imports',
   ],
   extends: [
     'eslint:recommended',
@@ -21,6 +16,11 @@ module.exports = {
     'prettier',
     'prettier/@typescript-eslint',
   ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    sourceType: 'module',
+    project: './tsconfig.json',
+  },
   rules: {
     // ESLint rules
     eqeqeq: ['error', 'always', { null: 'never' }],
@@ -68,7 +68,7 @@ module.exports = {
     '@typescript-eslint/no-unnecessary-condition': 'error',
     '@typescript-eslint/no-unnecessary-qualifier': 'error',
     '@typescript-eslint/no-unnecessary-type-arguments': 'error',
-    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/prefer-includes': 'error',
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
     '@typescript-eslint/prefer-optional-chain': 'error',
@@ -109,6 +109,16 @@ module.exports = {
       },
     ],
     'simple-import-sort/sort': 'error',
+    'unused-imports/no-unused-imports-ts': 'error',
+    'unused-imports/no-unused-vars-ts': [
+      'warn',
+      {
+        vars: 'all',
+        varsIgnorePattern: '^_',
+        args: 'after-used',
+        argsIgnorePattern: '^_',
+      },
+    ],
   },
   settings: {
     node: {
