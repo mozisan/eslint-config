@@ -108,7 +108,8 @@ module.exports = {
         noUselessIndex: true,
       },
     ],
-    'simple-import-sort/sort': 'error',
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
     'unused-imports/no-unused-imports-ts': 'error',
     'unused-imports/no-unused-vars-ts': [
       'warn',
