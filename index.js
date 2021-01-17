@@ -4,6 +4,7 @@ module.exports = {
     'filenames',
     'functional',
     'import',
+    'import-path',
     'simple-import-sort',
     'unused-imports',
   ],
@@ -107,6 +108,19 @@ module.exports = {
       {
         noUselessIndex: true,
       },
+    ],
+    'import-path/forbidden': [
+      'error',
+      [
+        {
+          match: '[^\\.]/_.*$',
+          message: 'Internal module can not be imported.',
+        },
+        {
+          match: '^~/.*[-A-Z]',
+          message: 'Camel-case or Pascal-case is forbidden.',
+        },
+      ],
     ],
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
