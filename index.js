@@ -24,6 +24,7 @@ module.exports = {
   },
   rules: {
     // ESLint rules
+    curly: 'error',
     eqeqeq: ['error', 'always', { null: 'never' }],
     'max-params': ['error', 2],
     'no-console': ['error', { allow: ['warn', 'error'] }],
