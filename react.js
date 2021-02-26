@@ -1,6 +1,6 @@
 module.exports = {
   plugins: ['react', 'react-hooks'],
-  extends: ['plugin:react/recommended', 'prettier/react'],
+  extends: ['plugin:react/recommended', 'prettier'],
   rules: {
     'react/display-name': 'off',
     'react/prop-types': 'off',
