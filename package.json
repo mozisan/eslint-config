@@ -23,26 +23,26 @@
     "upgrade-interactive": "ncu -i && npm i"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.15.2",
-    "@typescript-eslint/parser": "^4.15.2",
-    "eslint-config-prettier": "^8.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-filenames": "^1.3.2",
     "eslint-plugin-functional": "^3.2.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-import-path": "0.0.2",
-    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-unused-imports": "^1.1.0"
+    "eslint-plugin-unused-imports": "^1.1.1"
   },
   "devDependencies": {
     "husky": "^4.3.8",
-    "lint-staged": "^10.5.4",
-    "npm-check-updates": "^11.1.9",
-    "prettier": "^2.2.1",
-    "prettier-plugin-packagejson": "^2.2.10"
+    "lint-staged": "^11.0.0",
+    "npm-check-updates": "^11.5.11",
+    "prettier": "^2.3.0",
+    "prettier-plugin-packagejson": "^2.2.11"
   },
   "peerDependencies": {
-    "eslint": "^7.20.0"
+    "eslint": "^7.26.0"
   }
 }
