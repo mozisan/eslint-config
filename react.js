@@ -1,3 +1,4 @@
+/** @type {import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config} */
 module.exports = {
   plugins: ['react', 'react-hooks'],
   extends: ['plugin:react/recommended', 'prettier'],
