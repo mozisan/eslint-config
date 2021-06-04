@@ -1,6 +1,5 @@
 /** @type {import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config} */
 module.exports = {
-  parser: '@typescript-eslint/parser',
   extends: ['eslint:recommended', 'prettier'],
   plugins: ['simple-import-sort', 'unused-imports'],
   rules: {
@@ -41,12 +40,14 @@ module.exports = {
         'import-path',
       ],
       extends: [
+        'eslint:recommended',
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:import/typescript',
         'prettier',
       ],
+      parser: '@typescript-eslint/parser',
       parserOptions: {
         sourceType: 'module',
       },
