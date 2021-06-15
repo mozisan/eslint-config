@@ -65,7 +65,19 @@ module.exports = {
           {
             selector: 'default',
             format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
-            leadingUnderscore: 'allow',
+            leadingUnderscore: 'forbid',
+            trailingUnderscore: 'forbid',
+          },
+          {
+            selector: 'parameter',
+            format: ['camelCase'],
+            leadingUnderscore: 'allowSingleOrDouble',
+            trailingUnderscore: 'forbid',
+          },
+          {
+            selector: ['objectLiteralProperty', 'typeProperty'],
+            format: ['camelCase'],
+            leadingUnderscore: 'allowDouble',
             trailingUnderscore: 'forbid',
           },
           {
