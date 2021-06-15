@@ -70,13 +70,13 @@ module.exports = {
           },
           {
             selector: 'parameter',
-            format: ['camelCase'],
+            format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
             leadingUnderscore: 'allowSingleOrDouble',
             trailingUnderscore: 'forbid',
           },
           {
             selector: ['objectLiteralProperty', 'typeProperty'],
-            format: ['camelCase'],
+            format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
             leadingUnderscore: 'allowDouble',
             trailingUnderscore: 'forbid',
           },
