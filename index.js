@@ -2,6 +2,7 @@
 module.exports = {
   extends: ['eslint:recommended', 'prettier'],
   plugins: ['simple-import-sort', 'unused-imports'],
+  ignorePatterns: ['**/*.d.ts'],
   rules: {
     // ESLint rules
     curly: 'error',
@@ -32,7 +33,6 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],
-      excludedFiles: ['**/*.d.ts'],
       plugins: [
         '@typescript-eslint',
         'filenames',
