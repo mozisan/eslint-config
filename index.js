@@ -32,7 +32,7 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],
-      ignorePatterns: ['**/*.d.ts'],
+      excludedFiles: ['**/*.d.ts'],
       plugins: [
         '@typescript-eslint',
         'filenames',
