@@ -3,6 +3,7 @@ module.exports = {
   extends: ['eslint:recommended', 'prettier'],
   plugins: ['simple-import-sort', 'unused-imports'],
   ignorePatterns: ['**/*.d.ts'],
+  parser: '@typescript-eslint/parser',
   rules: {
     // ESLint rules
     curly: 'error',
@@ -32,6 +33,13 @@ module.exports = {
   },
   overrides: [
     {
+      files: ['**/*.mjs'],
+      parserOptions: {
+        sourceType: 'module',
+        extraFileExtensions: ['.mjs'],
+      },
+    },
+    {
       files: ['**/*.ts', '**/*.tsx'],
       plugins: [
         '@typescript-eslint',
@@ -48,7 +56,6 @@ module.exports = {
         'plugin:import/typescript',
         'prettier',
       ],
-      parser: '@typescript-eslint/parser',
       parserOptions: {
         sourceType: 'module',
       },
@@ -58,7 +65,10 @@ module.exports = {
         '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
         '@typescript-eslint/consistent-type-imports': 'error',
         '@typescript-eslint/explicit-function-return-type': 'off',
-        '@typescript-eslint/explicit-member-accessibility': 'error',
+        '@typescript-eslint/explicit-member-accessibility': [
+          'error',
+          { accessibility: 'no-public' },
+        ],
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/interface-name-prefix': 'off',
         '@typescript-eslint/naming-convention': [
