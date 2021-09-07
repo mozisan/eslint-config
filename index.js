@@ -9,11 +9,12 @@ module.exports = {
     curly: 'error',
     eqeqeq: ['error', 'always', { null: 'never' }],
     'max-params': ['error', 2],
-    'no-console': ['error', { allow: ['warn', 'error'] }],
+    'no-console': ['warn', { allow: ['warn', 'error'] }],
     'no-lonely-if': 'error',
     'no-lone-blocks': 'error',
     'no-loop-func': 'error',
     'no-param-reassign': 'error',
+    'no-unused-vars': 'off',
     'no-useless-rename': 'error',
     'object-shorthand': 'error',
     'prefer-destructuring': 'error',
@@ -33,14 +34,14 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/*.mjs'],
+      files: ['*.mjs'],
       parserOptions: {
         sourceType: 'module',
         extraFileExtensions: ['.mjs'],
       },
     },
     {
-      files: ['**/*.ts', '**/*.tsx'],
+      files: ['*.ts', '*.tsx'],
       plugins: [
         '@typescript-eslint',
         'filenames',
