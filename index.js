@@ -34,13 +34,6 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.mjs'],
-      parserOptions: {
-        sourceType: 'module',
-        extraFileExtensions: ['.mjs'],
-      },
-    },
-    {
       files: ['*.ts', '*.tsx'],
       plugins: [
         '@typescript-eslint',
