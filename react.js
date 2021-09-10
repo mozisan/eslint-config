@@ -9,6 +9,10 @@ module.exports = {
         'plugin:react/jsx-runtime',
         'prettier',
       ],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        sourceType: 'module',
+      },
       rules: {
         'react/jsx-no-useless-fragment': 'error',
         'react/jsx-sort-props': [

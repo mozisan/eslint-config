@@ -3,7 +3,6 @@ module.exports = {
   extends: ['eslint:recommended', 'prettier'],
   plugins: ['simple-import-sort', 'unused-imports'],
   ignorePatterns: ['**/*.d.ts'],
-  parser: '@typescript-eslint/parser',
   rules: {
     // ESLint rules
     curly: 'error',
@@ -34,6 +33,13 @@ module.exports = {
   },
   overrides: [
     {
+      files: ['*.mjs'],
+      parserOptions: {
+        ecmaVersion: 2020,
+        sourceType: 'module',
+      },
+    },
+    {
       files: ['*.ts', '*.tsx'],
       plugins: [
         '@typescript-eslint',
@@ -50,6 +56,7 @@ module.exports = {
         'plugin:import/typescript',
         'prettier',
       ],
+      parser: '@typescript-eslint/parser',
       parserOptions: {
         sourceType: 'module',
       },
