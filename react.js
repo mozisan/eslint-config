@@ -3,16 +3,12 @@ module.exports = {
   overrides: [
     {
       files: ['*.tsx'],
-      plugins: ['react', 'react-hooks'],
+      plugins: ['react'],
       extends: [
         'plugin:react/recommended',
         'plugin:react/jsx-runtime',
         'prettier',
       ],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        sourceType: 'module',
-      },
       rules: {
         'react/jsx-no-useless-fragment': 'error',
         'react/jsx-sort-props': [
@@ -24,13 +20,19 @@ module.exports = {
           },
         ],
         'react/prop-types': 'off',
-        'react-hooks/rules-of-hooks': 'error',
-        'react-hooks/exhaustive-deps': 'error',
       },
       settings: {
         react: {
           version: 'detect',
         },
+      },
+    },
+    {
+      files: ['*.ts', '*.tsx'],
+      plugins: ['react-hooks'],
+      rules: {
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error',
       },
     },
   ],
