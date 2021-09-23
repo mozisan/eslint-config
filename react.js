@@ -16,7 +16,7 @@ module.exports = {
           {
             callbacksLast: true,
             noSortAlphabetically: true,
-            reservedFirst: ['as', 'key', 'ref'],
+            reservedFirst: ['key', 'ref'],
           },
         ],
         'react/prop-types': 'off',
