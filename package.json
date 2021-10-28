@@ -38,9 +38,9 @@
     "eslint-plugin-unused-imports": "^1.1.5"
   },
   "devDependencies": {
-    "husky": "^7.0.2",
-    "lint-staged": "^11.2.2",
-    "npm-check": "^4.1.4",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.6",
+    "npm-check": "^5.9.2",
     "prettier": "^2.4.1",
     "prettier-plugin-packagejson": "^2.2.13"
   },
