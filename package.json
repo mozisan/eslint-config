@@ -45,6 +45,6 @@
     "prettier-plugin-packagejson": "^2.2.13"
   },
   "peerDependencies": {
-    "eslint": "^8 || ^7"
+    "eslint": "^7"
   }
 }
