@@ -142,6 +142,14 @@ module.exports = {
         'functional/no-method-signature': 'error',
         'functional/prefer-readonly-type': 'error',
         'import/first': 'error',
+        'import/no-anonymous-default-export': [
+          'error',
+          {
+            allowArray: true,
+            allowLiteral: true,
+            allowObject: true,
+          },
+        ],
         'import/no-default-export': 'error',
         'import/no-duplicates': 'error',
         'import/no-relative-parent-imports': 'error',
