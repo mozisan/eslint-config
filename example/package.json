@@ -1,0 +1,8 @@
+{
+  "name": "eslint-config-example-node",
+  "private": true,
+  "version": "0.0.0",
+  "dependencies": {
+    "@mozisan/eslint-config": "workspace:^2.3.2"
+  }
+}

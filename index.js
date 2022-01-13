@@ -1,8 +1,13 @@
 /** @type {import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config} */
 module.exports = {
-  extends: ['eslint:recommended', 'prettier'],
-  plugins: ['simple-import-sort', 'unused-imports'],
-  ignorePatterns: ['**/*.d.ts'],
+  plugins: ['import', 'simple-import-sort', 'unicorn', 'unused-imports'],
+  extends: [
+    'eslint:recommended',
+    'plugin:unicorn/recommended',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
+    'prettier',
+  ],
   rules: {
     // ESLint rules
     curly: 'error',
@@ -20,6 +25,17 @@ module.exports = {
     // Plugin rules
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
+    'unicorn/filename-case': [
+      'error',
+      {
+        case: 'snakeCase',
+      },
+    ],
+    'unicorn/no-array-callback-reference': 'off',
+    'unicorn/no-array-for-each': 'off',
+    'unicorn/no-array-reduce': 'off',
+    'unicorn/no-null': 'off',
+    'unicorn/template-indent': 'error',
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': [
       'error',
@@ -35,12 +51,12 @@ module.exports = {
     {
       files: ['*.mjs'],
       parserOptions: {
-        ecmaVersion: 2020,
+        ecmaVersion: 'latest',
         sourceType: 'module',
       },
     },
     {
-      files: ['*.ts', '*.tsx'],
+      files: ['*.ts?(x)'],
       plugins: [
         '@typescript-eslint',
         'filenames',
@@ -59,16 +75,23 @@ module.exports = {
       parser: '@typescript-eslint/parser',
       parserOptions: {
         sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+        warnOnUnsupportedTypeScriptVersion: true,
       },
       rules: {
         // Plugin rules
         '@typescript-eslint/consistent-indexed-object-style': 'error',
         '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+        '@typescript-eslint/consistent-type-exports': 'error',
         '@typescript-eslint/consistent-type-imports': 'error',
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/explicit-member-accessibility': [
           'error',
-          { accessibility: 'no-public' },
+          {
+            accessibility: 'no-public',
+          },
         ],
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/interface-name-prefix': 'off',
@@ -105,7 +128,9 @@ module.exports = {
         '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
         '@typescript-eslint/no-parameter-properties': [
           'error',
-          { allows: ['private readonly'] },
+          {
+            allows: ['private', 'readonly'],
+          },
         ],
         '@typescript-eslint/no-shadow': 'error',
         '@typescript-eslint/no-unnecessary-condition': 'error',
@@ -128,11 +153,6 @@ module.exports = {
         '@typescript-eslint/return-await': 'error',
         '@typescript-eslint/strict-boolean-expressions': 'error',
         '@typescript-eslint/switch-exhaustiveness-check': 'error',
-        'filenames/match-regex': [
-          'error',
-          '^(index(\\.d)?|_?[a-z][a-z0-9]+(_[a-z][a-z0-9]+)*(\\.d|\\.[a-z][a-z0-9]+)?)$',
-          true,
-        ],
         'functional/immutable-data': [
           'error',
           {
@@ -175,4 +195,5 @@ module.exports = {
       },
     },
   ],
+  ignorePatterns: ['**/*.d.ts'],
 };

@@ -33,7 +33,7 @@ module.exports = {
       },
     },
     {
-      files: ['*.ts', '*.tsx'],
+      files: ['*.ts?(x)'],
       plugins: ['react-hooks'],
       rules: {
         'react-hooks/rules-of-hooks': 'error',
