@@ -5,7 +5,6 @@ module.exports = {
     'eslint:recommended',
     'plugin:unicorn/recommended',
     'plugin:import/recommended',
-    'plugin:import/typescript',
     'prettier',
   ],
   rules: {
@@ -23,6 +22,24 @@ module.exports = {
     'object-shorthand': 'error',
     'prefer-destructuring': 'error',
     // Plugin rules
+    'import/first': 'error',
+    'import/no-anonymous-default-export': [
+      'error',
+      {
+        allowArray: true,
+        allowLiteral: true,
+        allowObject: true,
+      },
+    ],
+    'import/no-default-export': 'error',
+    'import/no-duplicates': 'error',
+    'import/no-relative-parent-imports': 'error',
+    'import/no-useless-path-segments': [
+      'error',
+      {
+        noUselessIndex: true,
+      },
+    ],
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
     'unicorn/filename-case': [
@@ -57,15 +74,8 @@ module.exports = {
     },
     {
       files: ['*.ts?(x)'],
-      plugins: [
-        '@typescript-eslint',
-        'filenames',
-        'functional',
-        'import',
-        'import-path',
-      ],
+      plugins: ['@typescript-eslint', 'functional'],
       extends: [
-        'eslint:recommended',
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
@@ -161,37 +171,7 @@ module.exports = {
         ],
         'functional/no-method-signature': 'error',
         'functional/prefer-readonly-type': 'error',
-        'import/first': 'error',
-        'import/no-anonymous-default-export': [
-          'error',
-          {
-            allowArray: true,
-            allowLiteral: true,
-            allowObject: true,
-          },
-        ],
-        'import/no-default-export': 'error',
-        'import/no-duplicates': 'error',
-        'import/no-relative-parent-imports': 'error',
-        'import/no-useless-path-segments': [
-          'error',
-          {
-            noUselessIndex: true,
-          },
-        ],
-        'import-path/forbidden': [
-          'error',
-          [
-            {
-              match: '[^\\.]/_.*$',
-              message: 'Internal module can not be imported.',
-            },
-            {
-              match: '^~/.*[-A-Z]',
-              message: 'Camel-case or Pascal-case is forbidden.',
-            },
-          ],
-        ],
+        'import/no-unresolved': 'off',
       },
     },
   ],

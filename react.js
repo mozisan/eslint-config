@@ -5,6 +5,7 @@ module.exports = {
       files: ['*.tsx'],
       plugins: ['react'],
       extends: [
+        'plugin:import/react',
         'plugin:react/recommended',
         'plugin:react/jsx-runtime',
         'prettier',
