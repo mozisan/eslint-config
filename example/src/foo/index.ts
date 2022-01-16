@@ -1,1 +1,1 @@
-export const foo = 'foo';
+export { foo } from './_foo';

@@ -6,3 +6,4 @@ export type Fuga = Hoge;
 useHoge();
 
 export { hoge as fuga } from './hoge';
+export { foo as bar } from '~/foo';
