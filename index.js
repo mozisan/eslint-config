@@ -44,6 +44,12 @@ module.exports = {
     ],
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
+    'unicorn/consistent-function-scoping': [
+      'error',
+      {
+        checkArrowFunctions: false,
+      },
+    ],
     'unicorn/filename-case': [
       'error',
       {
