@@ -114,13 +114,13 @@ module.exports = {
           {
             selector: 'default',
             format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
-            leadingUnderscore: 'forbid',
+            leadingUnderscore: 'allowSingle',
             trailingUnderscore: 'forbid',
           },
           {
             selector: 'parameter',
             format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
-            leadingUnderscore: 'allowSingleOrDouble',
+            leadingUnderscore: 'allowSingle',
             trailingUnderscore: 'forbid',
           },
           {
