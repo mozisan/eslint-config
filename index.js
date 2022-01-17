@@ -23,6 +23,8 @@ module.exports = {
     'prefer-destructuring': 'error',
     // Plugin rules
     'import/first': 'error',
+    'import/export': 'off',
+    'import/namespace': 'off',
     'import/no-anonymous-default-export': [
       'error',
       {
