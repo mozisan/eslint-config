@@ -52,6 +52,8 @@ module.exports = {
     'unicorn/no-array-for-each': 'off',
     'unicorn/no-array-reduce': 'off',
     'unicorn/no-null': 'off',
+    'unicorn/prefer-object-from-entries': 'off',
+    'unicorn/prevent-abbreviations': 'off',
     'unicorn/template-indent': 'error',
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': [
