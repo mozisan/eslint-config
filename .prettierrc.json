@@ -1,4 +1,5 @@
 {
+  "pluginSearchDirs": ["."],
   "singleQuote": true,
   "trailingComma": "all",
   "arrowParens": "always"
