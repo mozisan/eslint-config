@@ -75,6 +75,9 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
       },
+      rules: {
+        'import/no-unresolved': 'off',
+      },
     },
     {
       files: ['*.ts?(x)'],
