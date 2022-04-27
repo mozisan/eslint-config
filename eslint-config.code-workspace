@@ -17,7 +17,6 @@
     "editor.formatOnType": false,
     "eslint.enable": true,
     "eslint.workingDirectories": [{ "mode": "auto" }],
-    "eslint.packageManager": "pnpm",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
