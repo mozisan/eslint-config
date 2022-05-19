@@ -43,7 +43,18 @@ module.exports = {
         noUselessIndex: true,
       },
     ],
-    'simple-import-sort/imports': 'error',
+    'simple-import-sort/imports': [
+      'error',
+      {
+        groups: [
+          ['^\\u0000'], // Side effect imports
+          ['^node:'], // Built-in packages
+          ['^[^~#]@?\\w'], // Packages
+          ['^(~|#)'], // Internal imports
+          ['^\\.\\.(?!/?$)', '^\\.\\./?$'], // Relative imports
+        ],
+      },
+    ],
     'simple-import-sort/exports': 'error',
     'unicorn/consistent-function-scoping': [
       'error',
