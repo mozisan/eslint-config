@@ -98,7 +98,7 @@ module.exports = {
       },
     },
     {
-      files: ['*.ts?(x)'],
+      files: ['*.ts', '*.tsx', '*.mts'],
       plugins: ['@typescript-eslint', 'functional'],
       extends: [
         'plugin:@typescript-eslint/eslint-recommended',
@@ -200,5 +200,5 @@ module.exports = {
       },
     },
   ],
-  ignorePatterns: ['**/*.d.ts'],
+  ignorePatterns: ['**/*.d.ts', '**/*.d.mts'],
 };
