@@ -9,7 +9,6 @@ module.exports = {
   ],
   rules: {
     // ESLint rules
-    curly: ['error', 'multi-line', 'consistent'],
     eqeqeq: ['error', 'always', { null: 'never' }],
     'max-params': ['error', 2],
     'no-console': ['warn', { allow: ['warn', 'error'] }],
