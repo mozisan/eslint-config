@@ -16,6 +16,17 @@ module.exports = {
     'no-lone-blocks': 'error',
     'no-loop-func': 'error',
     'no-param-reassign': 'error',
+    'no-restricted-imports': [
+      'error',
+      {
+        patterns: [
+          {
+            group: ['../*'],
+            message: 'Usage of relative parent imports is not allowed.',
+          },
+        ],
+      },
+    ],
     'no-unused-vars': 'off',
     'no-useless-rename': 'error',
     'object-shorthand': 'error',
@@ -35,7 +46,6 @@ module.exports = {
     'import/no-default-export': 'error',
     'import/no-duplicates': 'error',
     'import/no-relative-packages': 'error',
-    'import/no-relative-parent-imports': 'error',
     'import/no-useless-path-segments': [
       'error',
       {
