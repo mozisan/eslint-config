@@ -11,6 +11,9 @@ module.exports = {
         'prettier',
       ],
       rules: {
+        'react/button-has-type': 'error',
+        'react/iframe-missing-sandbox': 'error',
+        'react/jsx-boolean-value': 'error',
         'react/jsx-no-useless-fragment': [
           'error',
           {
@@ -26,6 +29,7 @@ module.exports = {
           },
         ],
         'react/prop-types': 'off',
+        'react/self-closing-comp': 'error',
       },
       settings: {
         react: {

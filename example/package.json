@@ -9,7 +9,7 @@
     "react": "^17.0.2"
   },
   "devDependencies": {
-    "@mozisan/eslint-config": "workspace:3.0.0-6",
+    "@mozisan/eslint-config": "workspace",
     "@types/react": "^17.0.38"
   }
 }

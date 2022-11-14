@@ -19,3 +19,9 @@ EP;
 
 export { hoge as fuga } from './hoge';
 export { foo as bar } from '~/foo';
+
+export const f = (aaaaaaaaaaaaaaaaaaaaaaaaaaa: number) => {
+  const bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb = 10_000;
+  if (aaaaaaaaaaaaaaaaaaaaaaaaaaa > bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb)
+    return;
+};
