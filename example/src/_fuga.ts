@@ -1,1 +1,1 @@
-export const fuga = 'fuga';
+export const fuga = "fuga";

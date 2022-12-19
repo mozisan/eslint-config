@@ -2,47 +2,47 @@
 module.exports = {
   overrides: [
     {
-      files: ['*.tsx'],
-      plugins: ['react'],
+      files: ["*.tsx"],
+      plugins: ["react"],
       extends: [
-        'plugin:import/react',
-        'plugin:react/recommended',
-        'plugin:react/jsx-runtime',
-        'prettier',
+        "plugin:import/react",
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "prettier",
       ],
       rules: {
-        'react/button-has-type': 'error',
-        'react/iframe-missing-sandbox': 'error',
-        'react/jsx-boolean-value': 'error',
-        'react/jsx-no-useless-fragment': [
-          'error',
+        "react/button-has-type": "error",
+        "react/iframe-missing-sandbox": "error",
+        "react/jsx-boolean-value": "error",
+        "react/jsx-no-useless-fragment": [
+          "error",
           {
             allowExpressions: true,
           },
         ],
-        'react/jsx-sort-props': [
-          'error',
+        "react/jsx-sort-props": [
+          "error",
           {
             callbacksLast: true,
             noSortAlphabetically: true,
-            reservedFirst: ['key', 'ref'],
+            reservedFirst: ["key", "ref"],
           },
         ],
-        'react/prop-types': 'off',
-        'react/self-closing-comp': 'error',
+        "react/prop-types": "off",
+        "react/self-closing-comp": "error",
       },
       settings: {
         react: {
-          version: 'detect',
+          version: "detect",
         },
       },
     },
     {
-      files: ['*.ts?(x)'],
-      plugins: ['react-hooks'],
+      files: ["*.ts?(x)"],
+      plugins: ["react-hooks"],
       rules: {
-        'react-hooks/rules-of-hooks': 'error',
-        'react-hooks/exhaustive-deps': 'error',
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "error",
       },
     },
   ],
