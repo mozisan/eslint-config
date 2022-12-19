@@ -35,6 +35,7 @@ module.exports = {
     "import/first": "error",
     "import/export": "off",
     "import/namespace": "off",
+    "import/newline-after-import": "error",
     "import/no-anonymous-default-export": [
       "error",
       {
