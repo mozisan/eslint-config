@@ -59,7 +59,7 @@ module.exports = {
           ["^\\u0000"], // Side effect imports
           ["^node:"], // Built-in packages
           ["^[^~#]@?\\w"], // Packages
-          ["^(~|#)"], // Internal imports
+          ["^[~#]"], // Internal imports
           ["^\\.\\.(?!/?$)", "^\\.\\./?$"], // Relative imports
         ],
       },
