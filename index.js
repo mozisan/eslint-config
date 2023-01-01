@@ -1,6 +1,12 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  plugins: ["import", "simple-import-sort", "unicorn", "unused-imports"],
+  plugins: [
+    "import",
+    "import-access",
+    "simple-import-sort",
+    "unicorn",
+    "unused-imports",
+  ],
   extends: [
     "eslint:recommended",
     "plugin:unicorn/recommended",
@@ -53,6 +59,7 @@ module.exports = {
         noUselessIndex: true,
       },
     ],
+    "import-access/jsdoc": ["error"],
     "simple-import-sort/imports": [
       "error",
       {

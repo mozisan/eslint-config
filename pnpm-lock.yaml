@@ -13,6 +13,7 @@ importers:
       eslint-config-prettier: ^8.5.0
       eslint-plugin-functional: ^4.4.1
       eslint-plugin-import: ^2.26.0
+      eslint-plugin-import-access: ^1.0.1
       eslint-plugin-react: ^7.31.11
       eslint-plugin-react-hooks: ^4.6.0
       eslint-plugin-simple-import-sort: ^8.0.0
@@ -30,6 +31,7 @@ importers:
       eslint-config-prettier: 8.5.0_eslint@8.31.0
       eslint-plugin-functional: 4.4.1_iukboom6ndih5an6iafl45j2fe
       eslint-plugin-import: 2.26.0_ejk3zt536nc2nr7uicalblhboi
+      eslint-plugin-import-access: 1.0.1_iukboom6ndih5an6iafl45j2fe
       eslint-plugin-react: 7.31.11_eslint@8.31.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.31.0
       eslint-plugin-simple-import-sort: 8.0.0_eslint@8.31.0
@@ -253,6 +255,19 @@ packages:
       typescript: 4.9.4
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@typescript-eslint/experimental-utils/5.47.1_iukboom6ndih5an6iafl45j2fe:
+    resolution: {integrity: sha512-zWHo/VbqAiRvhXP5byQqW7rGQtdanajHnItGqtmv8JaIi58zMPnmGZ1bW/drXIjU1fuOyfTVoDkNS7aEWGDSLg==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
+    dependencies:
+      '@typescript-eslint/utils': 5.47.1_iukboom6ndih5an6iafl45j2fe
+      eslint: 8.31.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
     dev: false
 
   /@typescript-eslint/parser/5.47.1_iukboom6ndih5an6iafl45j2fe:
@@ -1037,6 +1052,18 @@ packages:
       typescript: 4.9.4
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /eslint-plugin-import-access/1.0.1_iukboom6ndih5an6iafl45j2fe:
+    resolution: {integrity: sha512-u9vNNDh7RTVUoPMsLepDt0fII5d8+k84/igZ41Hn4vqYMfktYAiwF4Y0pYGYDcZ6Ln7IB/VRaB6YUfRgFx8+Aw==}
+    dependencies:
+      '@typescript-eslint/experimental-utils': 5.47.1_iukboom6ndih5an6iafl45j2fe
+      '@typescript-eslint/typescript-estree': 5.47.1_typescript@4.9.4
+      tsutils: 3.21.0_typescript@4.9.4
+    transitivePeerDependencies:
+      - eslint
+      - supports-color
+      - typescript
     dev: false
 
   /eslint-plugin-import/2.26.0_bpx4furzt4ibermwbsj75osuwi:
