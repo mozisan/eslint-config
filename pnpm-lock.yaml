@@ -16,7 +16,6 @@ importers:
       eslint-plugin-import-access: ^1.0.1
       eslint-plugin-react: ^7.31.11
       eslint-plugin-react-hooks: ^4.6.0
-      eslint-plugin-simple-import-sort: ^8.0.0
       eslint-plugin-unicorn: ^45.0.2
       eslint-plugin-unused-imports: ^2.0.0
       husky: ^8.0.2
@@ -34,7 +33,6 @@ importers:
       eslint-plugin-import-access: 1.0.1_iukboom6ndih5an6iafl45j2fe
       eslint-plugin-react: 7.31.11_eslint@8.31.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.31.0
-      eslint-plugin-simple-import-sort: 8.0.0_eslint@8.31.0
       eslint-plugin-unicorn: 45.0.2_eslint@8.31.0
       eslint-plugin-unused-imports: 2.0.0_muj437zcjstb324sw2caifwg2a
     devDependencies:
@@ -1181,14 +1179,6 @@ packages:
       resolve: 2.0.0-next.4
       semver: 6.3.0
       string.prototype.matchall: 4.0.8
-    dev: false
-
-  /eslint-plugin-simple-import-sort/8.0.0_eslint@8.31.0:
-    resolution: {integrity: sha512-bXgJQ+lqhtQBCuWY/FUWdB27j4+lqcvXv5rUARkzbeWLwea+S5eBZEQrhnO+WgX3ZoJHVj0cn943iyXwByHHQw==}
-    peerDependencies:
-      eslint: '>=5.0.0'
-    dependencies:
-      eslint: 8.31.0
     dev: false
 
   /eslint-plugin-unicorn/45.0.2_eslint@8.31.0:

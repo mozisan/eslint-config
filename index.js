@@ -1,12 +1,6 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  plugins: [
-    "import",
-    "import-access",
-    "simple-import-sort",
-    "unicorn",
-    "unused-imports",
-  ],
+  plugins: ["import", "import-access", "unicorn", "unused-imports"],
   extends: [
     "eslint:recommended",
     "plugin:unicorn/recommended",
@@ -60,19 +54,6 @@ module.exports = {
       },
     ],
     "import-access/jsdoc": ["error"],
-    "simple-import-sort/imports": [
-      "error",
-      {
-        groups: [
-          ["^\\u0000"], // Side effect imports
-          ["^node:"], // Built-in packages
-          ["^[^~#]@?\\w"], // Packages
-          ["^[~#]"], // Internal imports
-          ["^\\.\\.(?!/?$)", "^\\.\\./?$"], // Relative imports
-        ],
-      },
-    ],
-    "simple-import-sort/exports": "error",
     "unicorn/consistent-function-scoping": [
       "error",
       {
