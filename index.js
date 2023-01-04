@@ -1,5 +1,6 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
+  reportUnusedDisableDirectives: true,
   plugins: ["import", "import-access", "unicorn", "unused-imports"],
   extends: [
     "eslint:recommended",
