@@ -3,7 +3,6 @@ module.exports = {
   plugins: ["import", "import-access", "unicorn", "unused-imports"],
   extends: [
     "eslint:recommended",
-    "plugin:eslint-comments/recommended",
     "plugin:unicorn/recommended",
     "plugin:import/recommended",
     "prettier",
