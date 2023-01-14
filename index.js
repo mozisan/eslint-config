@@ -1,8 +1,8 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
 	reportUnusedDisableDirectives: true,
-	plugins: ["import", "import-access", "unicorn", "unused-imports"],
 	extends: ["eslint:recommended", "plugin:unicorn/recommended", "plugin:import/recommended", "prettier"],
+	plugins: ["import-access", "unused-imports"],
 	rules: {
 		// ESLint rules
 		eqeqeq: ["error", "always", { null: "never" }],

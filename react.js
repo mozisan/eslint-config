@@ -3,8 +3,13 @@ module.exports = {
 	overrides: [
 		{
 			files: ["*.tsx"],
-			plugins: ["react"],
-			extends: ["plugin:import/react", "plugin:react/recommended", "plugin:react/jsx-runtime", "prettier"],
+			extends: [
+				"plugin:import/react",
+				"plugin:react/recommended",
+				"plugin:react/jsx-runtime",
+				"plugin:react-perf/recommended",
+				"prettier",
+			],
 			parserOptions: {
 				ecmaFeatures: {
 					jsx: true,
