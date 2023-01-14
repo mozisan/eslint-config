@@ -1,19 +1,23 @@
 {
-  "extends": ["@mozisan/eslint-config"],
-  "parserOptions": {
-    "project": "tsconfig.json"
-  },
-  "rules": {
-    "import/no-duplicates": "error"
-  },
-  "overrides": [
-    {
-      "files": ["*.tsx"],
-      "extends": ["@mozisan/eslint-config/react"]
-    },
-    {
-      "files": ["*.next.tsx"],
-      "extends": ["@mozisan/eslint-config/next"]
-    }
-  ]
+	"root": true,
+	"extends": ["@mozisan/eslint-config"],
+	"parserOptions": {
+		"project": "tsconfig.json"
+	},
+	"settings": {
+		"import/internal-regex": "^~/"
+	},
+	"rules": {
+		"import/no-duplicates": "error"
+	},
+	"overrides": [
+		{
+			"files": ["*.tsx"],
+			"extends": ["@mozisan/eslint-config/react"]
+		},
+		{
+			"files": ["*.next.tsx"],
+			"extends": ["@mozisan/eslint-config/next"]
+		}
+	]
 }

@@ -1,63 +1,64 @@
 {
-  "name": "@mozisan/eslint-config",
-  "version": "4.1.2",
-  "description": "mozisan's ESLint config",
-  "keywords": [],
-  "homepage": "https://github.com/mozisan/eslint-config#readme",
-  "bugs": {
-    "url": "https://github.com/mozisan/eslint-config/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mozisan/eslint-config.git"
-  },
-  "license": "MIT",
-  "author": "mozisan <cc.sig@icloud.com>",
-  "main": "index.js",
-  "files": [
-    "package.json",
-    "index.js",
-    "react.js",
-    "next.js"
-  ],
-  "scripts": {
-    "prepare": "husky install",
-    "update": "pnpm update --interactive --latest"
-  },
-  "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.47.1",
-    "@typescript-eslint/parser": "^5.47.1",
-    "eslint-config-next": "^13.1.1",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-functional": "^4.4.1",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-import-access": "^1.0.1",
-    "eslint-plugin-react": "^7.31.11",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-unicorn": "^45.0.2",
-    "eslint-plugin-unused-imports": "^2.0.0"
-  },
-  "devDependencies": {
-    "eslint": "^8.31.0",
-    "husky": "^8.0.2",
-    "lint-staged": "^13.1.0",
-    "prettier": "^2.8.1",
-    "prettier-plugin-packagejson": "^2.3.0",
-    "typescript": "^4.9.4"
-  },
-  "peerDependencies": {
-    "eslint": "^8"
-  },
-  "packageManager": "pnpm@7.18.2",
-  "pnpm": {
-    "packageExtensions": {
-      "eslint-config-next": {
-        "peerDependenciesMeta": {
-          "next": {
-            "optional": true
-          }
-        }
-      }
-    }
-  }
+	"name": "@mozisan/eslint-config",
+	"version": "4.1.2",
+	"description": "mozisan's ESLint config",
+	"keywords": [],
+	"homepage": "https://github.com/mozisan/eslint-config#readme",
+	"bugs": {
+		"url": "https://github.com/mozisan/eslint-config/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mozisan/eslint-config.git"
+	},
+	"license": "MIT",
+	"author": "mozisan <cc.sig@icloud.com>",
+	"main": "index.js",
+	"files": [
+		"package.json",
+		"index.js",
+		"react.js",
+		"next.js"
+	],
+	"scripts": {
+		"prepare": "husky install"
+	},
+	"prettier": "@mozisan/prettier-config/react",
+	"dependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.48.1",
+		"@typescript-eslint/parser": "^5.48.1",
+		"eslint-config-next": "^13.1.2",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-plugin-functional": "^4.4.1",
+		"eslint-plugin-import": "^2.27.4",
+		"eslint-plugin-import-access": "^1.0.1",
+		"eslint-plugin-react": "^7.32.0",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-unicorn": "^45.0.2",
+		"eslint-plugin-unused-imports": "^2.0.0"
+	},
+	"devDependencies": {
+		"@mozisan/prettier-config": "^1.1.0",
+		"eslint": "^8.31.0",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.1.0",
+		"prettier": "^2.8.3",
+		"prettier-plugin-packagejson": "^2.3.0",
+		"typescript": "^4.9.4"
+	},
+	"peerDependencies": {
+		"eslint": "^8"
+	},
+	"packageManager": "pnpm@7.18.2",
+	"pnpm": {
+		"packageExtensions": {
+			"eslint-config-next": {
+				"peerDependenciesMeta": {
+					"next": {
+						"optional": true
+					}
+				}
+			}
+		}
+	}
 }
