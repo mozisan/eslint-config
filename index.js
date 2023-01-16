@@ -55,12 +55,7 @@ module.exports = {
 				checkArrowFunctions: false,
 			},
 		],
-		"unicorn/filename-case": [
-			"error",
-			{
-				case: "snakeCase",
-			},
-		],
+		"unicorn/filename-case": "off",
 		"unicorn/no-array-callback-reference": "off",
 		"unicorn/no-array-for-each": "off",
 		"unicorn/no-array-reduce": "off",
@@ -99,7 +94,7 @@ module.exports = {
 				"plugin:import/typescript",
 				"prettier",
 			],
-			plugins: ["functional", "import-access"],
+			plugins: ["check-file", "functional", "import-access"],
 			parser: "@typescript-eslint/parser",
 			parserOptions: {
 				sourceType: "module",
@@ -183,6 +178,18 @@ module.exports = {
 				"@typescript-eslint/return-await": "error",
 				"@typescript-eslint/strict-boolean-expressions": "error",
 				"@typescript-eslint/switch-exhaustiveness-check": "error",
+				"check-file/filename-naming-convention": [
+					"error",
+					{
+						"**/*.{ts,tsx,mts}": "+(_|[a-z])",
+					},
+				],
+				"check-file/folder-naming-convention": [
+					"error",
+					{
+						"**": "SNAKE_CASE",
+					},
+				],
 				"functional/immutable-data": [
 					"error",
 					{
