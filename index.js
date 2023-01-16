@@ -181,7 +181,7 @@ module.exports = {
 				"check-file/filename-naming-convention": [
 					"error",
 					{
-						"**/*.{ts,tsx,mts}": "+(_|[a-z])",
+						"**/*.{ts,tsx,mts}": "+([_a-z])?(.+([a-z]))",
 					},
 				],
 				"check-file/folder-naming-convention": [
