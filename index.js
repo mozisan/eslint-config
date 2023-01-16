@@ -2,7 +2,7 @@
 module.exports = {
 	reportUnusedDisableDirectives: true,
 	extends: ["eslint:recommended", "plugin:unicorn/recommended", "plugin:import/recommended", "prettier"],
-	plugins: ["import-access", "unused-imports"],
+	plugins: ["unused-imports"],
 	rules: {
 		// ESLint rules
 		eqeqeq: ["error", "always", { null: "never" }],
@@ -50,7 +50,6 @@ module.exports = {
 				noUselessIndex: true,
 			},
 		],
-		"import-access/jsdoc": ["error"],
 		"unicorn/consistent-function-scoping": [
 			"error",
 			{
@@ -94,7 +93,6 @@ module.exports = {
 		},
 		{
 			files: ["*.ts", "*.tsx", "*.mts"],
-			plugins: ["@typescript-eslint", "functional"],
 			extends: [
 				"plugin:@typescript-eslint/eslint-recommended",
 				"plugin:@typescript-eslint/recommended",
@@ -102,6 +100,7 @@ module.exports = {
 				"plugin:import/typescript",
 				"prettier",
 			],
+			plugins: ["functional", "import-access"],
 			parser: "@typescript-eslint/parser",
 			parserOptions: {
 				sourceType: "module",
@@ -194,6 +193,7 @@ module.exports = {
 				"functional/no-method-signature": "error",
 				"functional/prefer-readonly-type": "error",
 				"import/no-unresolved": "off",
+				"import-access/jsdoc": ["error"],
 			},
 		},
 	],
