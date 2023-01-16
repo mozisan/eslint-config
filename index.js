@@ -43,7 +43,7 @@ module.exports = {
 		],
 		"import/no-default-export": "error",
 		"import/no-duplicates": "error",
-		"import/no-relative-parent-imports": "error",
+		"import/no-relative-packages": "error",
 		"import/no-useless-path-segments": [
 			"error",
 			{
