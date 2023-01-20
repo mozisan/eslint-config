@@ -15,5 +15,29 @@ module.exports = {
 				],
 			},
 		},
+		{
+			files: ["next.config.*"],
+			env: {
+				node: true,
+			},
+			rules: {
+				"import/no-default-export": "off",
+			},
+		},
+		{
+			files: [
+				"app/**/*.tsx",
+				"pages/**/*.tsx",
+				"pages/api/**/*.ts",
+				"src/app/**/*.tsx",
+				"src/pages/**/*.tsx",
+				"src/pages/api/**/*.ts",
+			],
+			rules: {
+				"check-file/filename-naming-convention": "off",
+				"check-file/folder-naming-convention": "off",
+				"import/no-default-export": "off",
+			},
+		},
 	],
 };
