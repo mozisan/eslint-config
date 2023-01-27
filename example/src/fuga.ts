@@ -6,7 +6,8 @@ import * as EP from "@typescript-eslint/eslint-plugin";
 import { bar, foo } from "~/foo";
 import {} from "~/foo/_foo"; // eslint-disable-line no-restricted-imports
 
-import { type Hoge, useHoge } from "./hoge";
+import type { Hoge } from "./hoge";
+import { useHoge } from "./hoge";
 
 export type Fuga = Hoge;
 
