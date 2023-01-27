@@ -122,8 +122,18 @@ module.exports = {
 				// Plugin rules
 				"@typescript-eslint/consistent-indexed-object-style": "error",
 				"@typescript-eslint/consistent-type-definitions": ["error", "type"],
-				"@typescript-eslint/consistent-type-exports": "error",
-				"@typescript-eslint/consistent-type-imports": "error",
+				"@typescript-eslint/consistent-type-exports": [
+					"error",
+					{
+						fixMixedExportsWithInlineTypeSpecifier: true,
+					},
+				],
+				"@typescript-eslint/consistent-type-imports": [
+					"error",
+					{
+						fixStyle: "inline-type-imports",
+					},
+				],
 				"@typescript-eslint/explicit-function-return-type": "off",
 				"@typescript-eslint/explicit-member-accessibility": [
 					"error",
