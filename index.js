@@ -2,7 +2,7 @@
 module.exports = {
 	reportUnusedDisableDirectives: true,
 	extends: ["eslint:recommended", "plugin:unicorn/recommended", "plugin:import/recommended", "prettier"],
-	plugins: ["unused-imports"],
+	plugins: ["simple-import-sort", "unused-imports"],
 	rules: {
 		// ESLint rules
 		eqeqeq: ["error", "always", { null: "never" }],
@@ -49,6 +49,19 @@ module.exports = {
 				noUselessIndex: true,
 			},
 		],
+		"simple-import-sort/imports": [
+			"error",
+			{
+				groups: [
+					["^\\u0000"], // Side effect imports
+					["^node:"], // Built-in packages
+					["^[^~#]@?\\w"], // Packages
+					["^[~#]"], // Internal imports
+					["^\\.\\.(?!/?$)", "^\\.\\./?$"], // Relative imports
+				],
+			},
+		],
+		"simple-import-sort/exports": "error",
 		"unicorn/consistent-function-scoping": [
 			"error",
 			{
