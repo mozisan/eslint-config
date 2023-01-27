@@ -7,9 +7,6 @@
 	"settings": {
 		"import/internal-regex": "^~/"
 	},
-	"rules": {
-		"import/no-duplicates": "error"
-	},
 	"overrides": [
 		{
 			"files": ["*.tsx"],

@@ -6,8 +6,7 @@ import * as EP from "@typescript-eslint/eslint-plugin";
 import { bar, foo } from "~/foo";
 import {} from "~/foo/_foo"; // eslint-disable-line no-restricted-imports
 
-import type { Hoge } from "./hoge";
-import { useHoge } from "./hoge";
+import { type Hoge, useHoge } from "./hoge";
 
 export type Fuga = Hoge;
 
@@ -18,8 +17,8 @@ foo;
 FS;
 EP;
 
-export { foo as bar } from "~/foo";
 export { hoge as fuga } from "./hoge";
+export { foo as bar } from "~/foo";
 
 export const f = (aaaaaaaaaaaaaaaaaaaaaaaaaaa: number) => {
 	const bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb = 10_000;
