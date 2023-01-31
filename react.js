@@ -1,5 +1,10 @@
 /** @type {import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config} */
 module.exports = {
+	settings: {
+		react: {
+			version: "detect",
+		},
+	},
 	overrides: [
 		{
 			files: ["*.tsx"],
@@ -35,11 +40,6 @@ module.exports = {
 				],
 				"react/prop-types": "off",
 				"react/self-closing-comp": "error",
-			},
-			settings: {
-				react: {
-					version: "detect",
-				},
 			},
 		},
 		{

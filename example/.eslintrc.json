@@ -9,11 +9,11 @@
 	},
 	"overrides": [
 		{
-			"files": ["*.tsx"],
+			"files": ["*.tsx", "*.hooks.ts"],
 			"extends": ["@mozisan/eslint-config/react"]
 		},
 		{
-			"files": ["*.next.tsx"],
+			"files": ["src/pages/**/*.tsx", "src/pages/api/**/*.ts"],
 			"extends": ["@mozisan/eslint-config/next"]
 		}
 	]

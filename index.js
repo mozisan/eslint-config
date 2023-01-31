@@ -3,6 +3,13 @@ module.exports = {
 	reportUnusedDisableDirectives: true,
 	extends: ["eslint:recommended", "plugin:unicorn/recommended", "plugin:import/recommended", "prettier"],
 	plugins: ["simple-import-sort", "unused-imports"],
+	settings: {
+		"import/resolver": {
+			typescript: {
+				alwaysTryTypes: true,
+			},
+		},
+	},
 	rules: {
 		// ESLint rules
 		eqeqeq: ["error", "always", { null: "never" }],
@@ -112,11 +119,6 @@ module.exports = {
 			parserOptions: {
 				sourceType: "module",
 				warnOnUnsupportedTypeScriptVersion: true,
-			},
-			settings: {
-				"import/resolver": {
-					typescript: {},
-				},
 			},
 			rules: {
 				// Plugin rules
