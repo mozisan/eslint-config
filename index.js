@@ -211,7 +211,7 @@ module.exports = {
 						ignorePattern: "Ref\\.[^\\.]+$",
 					},
 				],
-				"functional/no-method-signature": "error",
+				"functional/prefer-property-signatures": "error",
 				"functional/prefer-readonly-type": "error",
 				"import/no-unresolved": "off",
 				"import-access/jsdoc": ["error"],
