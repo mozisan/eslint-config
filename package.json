@@ -1,6 +1,6 @@
 {
 	"name": "@mozisan/eslint-config",
-	"version": "4.5.0",
+	"version": "4.5.1",
 	"description": "mozisan's ESLint config",
 	"keywords": [],
 	"homepage": "https://github.com/mozisan/eslint-config#readme",
