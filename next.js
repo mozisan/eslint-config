@@ -17,10 +17,10 @@ module.exports = {
 		},
 		{
 			files: [
-				"app/**/*.tsx",
+				"app/**/*.ts?(x)",
 				"pages/**/*.tsx",
 				"pages/api/**/*.ts",
-				"src/app/**/*.tsx",
+				"src/app/**/*.ts?(x)",
 				"src/pages/**/*.tsx",
 				"src/pages/api/**/*.ts",
 			],
