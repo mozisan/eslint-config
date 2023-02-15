@@ -16,15 +16,6 @@ module.exports = {
 			},
 		},
 		{
-			files: ["next.config.*"],
-			env: {
-				node: true,
-			},
-			rules: {
-				"import/no-default-export": "off",
-			},
-		},
-		{
 			files: [
 				"app/**/*.tsx",
 				"pages/**/*.tsx",
@@ -36,6 +27,24 @@ module.exports = {
 			rules: {
 				"check-file/filename-naming-convention": "off",
 				"check-file/folder-naming-convention": "off",
+				"import/no-default-export": "off",
+			},
+		},
+		{
+			files: ["next.config.?(c)js"],
+			env: {
+				node: true,
+			},
+			rules: {
+				"unicorn/prefer-module": "off",
+			},
+		},
+		{
+			files: ["next.config.mjs"],
+			env: {
+				node: true,
+			},
+			rules: {
 				"import/no-default-export": "off",
 			},
 		},
