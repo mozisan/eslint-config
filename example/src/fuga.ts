@@ -25,3 +25,10 @@ export const f = (aaaaaaaaaaaaaaaaaaaaaaaaaaa: number) => {
 	const bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb = 10_000;
 	if (aaaaaaaaaaaaaaaaaaaaaaaaaaa > bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb) return;
 };
+
+export const g = async () => {
+	await Promise.resolve();
+	return 1;
+};
+
+export const h = async () => g(); // eslint-disable-line @typescript-eslint/return-await
