@@ -118,6 +118,7 @@ module.exports = {
 			parser: "@typescript-eslint/parser",
 			parserOptions: {
 				sourceType: "module",
+				project: "tsconfig.json",
 				warnOnUnsupportedTypeScriptVersion: true,
 			},
 			rules: {
@@ -236,6 +237,21 @@ module.exports = {
 				"functional/prefer-readonly-type": "error",
 				"import/no-unresolved": "off",
 				"import-access/jsdoc": ["error"],
+			},
+		},
+		{
+			files: ["*.config.cjs"],
+			env: {
+				node: true,
+			},
+			rules: {
+				"unicorn/prefer-module": "off",
+			},
+		},
+		{
+			files: ["*.config.mjs"],
+			rules: {
+				"import/no-default-export": "off",
 			},
 		},
 	],
