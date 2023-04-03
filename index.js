@@ -268,6 +268,13 @@ module.exports = {
 				"import/no-default-export": "off",
 			},
 		},
+		{
+			files: ["*.config.ts", "*.config.mts"],
+			rules: {
+				"check-file/filename-naming-convention": "off",
+				"import/no-default-export": "off",
+			},
+		},
 	],
 	ignorePatterns: ["**/*.d.ts", "**/*.d.mts"],
 };
