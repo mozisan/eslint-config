@@ -49,7 +49,6 @@ module.exports = {
 		],
 		"import/no-default-export": "error",
 		"import/no-duplicates": "error",
-		"import/no-relative-packages": "error",
 		"import/no-useless-path-segments": [
 			"error",
 			{
@@ -114,7 +113,7 @@ module.exports = {
 				"plugin:import/typescript",
 				"prettier",
 			],
-			plugins: ["check-file", "functional", "import-access"],
+			plugins: ["check-file", "functional", "import-access", "no-relative-import-paths"],
 			parser: "@typescript-eslint/parser",
 			parserOptions: {
 				sourceType: "module",
@@ -251,6 +250,7 @@ module.exports = {
 				"functional/prefer-readonly-type": "error",
 				"import/no-unresolved": "off",
 				"import-access/jsdoc": ["error"],
+				"no-relative-import-paths/no-relative-import-paths": ["error", { allowSameFolder: true }],
 			},
 		},
 		{
