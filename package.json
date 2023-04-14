@@ -26,14 +26,14 @@
 	},
 	"prettier": "@mozisan/prettier-config",
 	"dependencies": {
-		"@next/eslint-plugin-next": "^13.2.4",
-		"@typescript-eslint/eslint-plugin": "^5.57.0",
-		"@typescript-eslint/parser": "^5.57.0",
-		"@typescript-eslint/type-utils": "^5.57.0",
-		"@typescript-eslint/utils": "^5.57.0",
+		"@next/eslint-plugin-next": "^13.3.0",
+		"@typescript-eslint/eslint-plugin": "^5.58.0",
+		"@typescript-eslint/parser": "^5.58.0",
+		"@typescript-eslint/type-utils": "^5.58.0",
+		"@typescript-eslint/utils": "^5.58.0",
 		"eslint-config-prettier": "^8.8.0",
-		"eslint-import-resolver-typescript": "^3.5.4",
-		"eslint-plugin-check-file": "^2.1.0",
+		"eslint-import-resolver-typescript": "^3.5.5",
+		"eslint-plugin-check-file": "^2.2.0",
 		"eslint-plugin-functional": "^5.0.7",
 		"eslint-plugin-import": "^2.27.5",
 		"eslint-plugin-import-access": "^1.0.2",
@@ -41,18 +41,18 @@
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-react-perf": "^3.3.1",
 		"eslint-plugin-simple-import-sort": "^10.0.0",
-		"eslint-plugin-tailwindcss": "^3.10.1",
+		"eslint-plugin-tailwindcss": "^3.11.0",
 		"eslint-plugin-unicorn": "^46.0.0",
 		"eslint-plugin-unused-imports": "^2.0.0"
 	},
 	"devDependencies": {
 		"@mozisan/prettier-config": "^2.1.0",
-		"eslint": "^8.37.0",
+		"eslint": "^8.38.0",
 		"husky": "^8.0.3",
-		"lint-staged": "^13.2.0",
+		"lint-staged": "^13.2.1",
 		"prettier": "^2.8.7",
-		"tailwindcss": "^3.3.0",
-		"typescript": "^5.0.2"
+		"tailwindcss": "^3.3.1",
+		"typescript": "^5.0.4"
 	},
 	"peerDependencies": {
 		"eslint": "^8",
@@ -63,5 +63,5 @@
 			"optional": true
 		}
 	},
-	"packageManager": "pnpm@8.0.0"
+	"packageManager": "pnpm@8.2.0"
 }
