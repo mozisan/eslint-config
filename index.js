@@ -4,6 +4,9 @@ module.exports = {
 	extends: ["eslint:recommended", "plugin:unicorn/recommended", "plugin:import/recommended", "prettier"],
 	plugins: ["simple-import-sort", "unused-imports"],
 	settings: {
+		"import/parsers": {
+			"@typescript-eslint/parser": [".ts", ".tsx"],
+		},
 		"import/resolver": {
 			typescript: {
 				alwaysTryTypes: true,
