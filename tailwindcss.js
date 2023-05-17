@@ -1,5 +1,10 @@
 /** @type {import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config} */
 module.exports = {
+	settings: {
+		tailwindcss: {
+			callees: ["classnames", "clsx", "ctl", "cva", "twJoin", "twMerge", "tv"],
+		},
+	},
 	overrides: [
 		{
 			files: ["*.tsx"],
